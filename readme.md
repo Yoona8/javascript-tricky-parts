@@ -195,3 +195,60 @@ function Animal(name) {
 
 </p>
 </details>
+
+### 10. Is it possible to create functions A and B so that object a = object b?
+
+```JavaScript
+function A() {}
+function B() {}
+
+var a = new A();
+var b = new B();
+
+console.log(a === b); // true
+```
+
+<details>
+<summary>Answer</summary>
+<p>
+
+```JavaScript
+var animal = {
+    name: 'Cat'
+};
+
+function A() {
+    // some code
+    return animal;
+}
+function B() {
+    // some code
+    return animal;
+}
+
+var a = new A();
+var b = new B();
+
+console.log(a === b); // true
+```
+
+</p>
+</details>
+
+### 11. What is the output?
+
+```JavaScript
+var arr = [1, 2, 15];
+
+arr.sort();
+console.log(arr);
+```
+
+<details>
+<summary>Answer</summary>
+<p>
+
+`[1, 15, 2]`
+
+</p>
+</details>
