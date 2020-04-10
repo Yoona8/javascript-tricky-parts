@@ -143,7 +143,7 @@ console.log(cat.name);
 
 function Animal(name) {
     this.name = name;
-    this.canTalk - true;
+    this.canTalk = true;
 }
 
 function Animal(name) {
