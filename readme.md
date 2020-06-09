@@ -252,3 +252,39 @@ console.log(arr);
 
 </p>
 </details>
+
+### 12. What will be logged?
+```JavaScript
+var fn = function() {
+    console.log(this.length);
+};
+var length = 10;
+var obj = {
+    length: 5,
+    method: function(fn) {
+        fn();
+        arguments[0]();
+    }
+};
+
+obj.method(fn);
+```
+
+### 13. What will be logged?
+```JavaScript
+var obj = {
+    foo: 'foo',
+    method: function() {
+        var self = this;
+        console.log(this.foo);
+        console.log(self.foo);
+
+        (function() {
+            console.log(this.foo);
+            console.log(self.foo);
+        })();
+    }
+};
+
+obj.method();
+```
